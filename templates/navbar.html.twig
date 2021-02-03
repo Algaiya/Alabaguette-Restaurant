@@ -1,0 +1,119 @@
+
+            <nav class="nav">
+                <div class="container">
+                        <div class="divAjustement">
+                            <span class="open-slide">
+                                <a href="#" onclick="openSlideMenu()">Reservation</a>
+                            </span>
+                        </div>
+                    
+                    <div id="side-menu" class="side-nav">
+                        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                        
+                        <div class="wrapper">
+                            <div class="title">
+                                Reservation 
+                            </div>
+                            <form class="form">
+                                <div class="inputfield">
+                                    <label>Prenom</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="inputfield">
+                                    <label>Nom</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="inputfield">
+                                    <label>Address mail</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="inputfield">
+                                    <label>Telephone</label>
+                                    <input type="text" class="input">
+                                </div>
+                                <div class="inputfield">
+                                    <label>Nombre de personne</label>
+                                    <div class="custom_select">
+                                        <select>
+                                        <option value="1">1 person</option>
+                                        <option value="2">2 persons</option>
+                                        <option value="3">3 persons</option>
+                                        <option value="4">4 persons</option>
+                                        <option value="5">5 persons</option>
+                                        <option value="6">6 persons</option>
+                                        <option value="7">+ 7 persons</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="inputfield">
+                                    <label>Date </label>
+                                    <input type="date" class="input">
+                                </div>
+                                <div class="inputfield">
+                                    <label> Horaire </label>
+                                    <input class="input" type="time">
+                                </div>
+                                <div class="inputfield">
+                                    <label>Allergies</label>
+                                    <textarea class="textarea"></textarea>
+                                </div>
+                                
+                                <div class="inputfield">
+                                    <input type="submit" value="Confirmation" class="btn">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                        <!-- Mise en place logo -->
+                        <div class="divAjustement">
+                            <div class="Logo">
+                                <a href="#Accueil"><img src="{{ asset('assets/images/Logo-type1.png') }}" alt="Logo du restaurant A la baguette"></a>      
+                            </div>
+                        </div>
+                    <!-- Fin Logo -->
+                    
+                    <div class="divAjustement">
+                        <div class="menu-toggle">
+                            <i class="fas fa-bars"></i>
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    
+                    <ul class="nav-list">
+                        
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">ACCUEIL</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">LE RESTAURANT</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">RESERVATION</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">CLICK AND COLLECT</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">CONTACT</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="{ path('mentionslegales.html.twig') }" class="nav-link">MENTIONS LEGALES</a>
+                        </li>
+                        
+                        <div class="Languages">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"> FR </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"> EN </a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </nav>

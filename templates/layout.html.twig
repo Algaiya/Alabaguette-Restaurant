@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        {% include 'linkcss.html.twig' %}
+
+        {% block LinkEnfants %}{% endblock %}
+        {% block CssEnfants %}{% endblock %}
+        {% block JsEnfants %}{% endblock %}
+        {% block ScriptEnfants %}{% endblock %}
+
+        <link rel="icon" type="image/png" href="images/Logo_type1-02.png" sizes="16x16"/>
+
+    </head>
+
+    <body>
+
+        <header>
+            {% include 'navbar.html.twig' %}
+        </header>
+
+        <main>
+            {% block main %}
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            {% endblock %}
+        </main>
+
+        <footer>
+            {% include 'footer.html.twig' %}
+        </footer>
+
+    </body>
+
+</html>

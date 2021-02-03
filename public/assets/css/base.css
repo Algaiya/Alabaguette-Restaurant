@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+
+header * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Old Standard TT', serif;
+  text-decoration: none;
+}
+
+/* Page slider */
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 10px;
+}
+
+.swiper-slide .img-box img {
+  /* J'ai remplacé le chemin .swiper-slide, img, .img-box par ce qu'il y a au-dessus pour pouvoir modifier le logo */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-box button {
+  position: absolute;
+  bottom: 80px;
+  padding: 5px 20px;
+  color: #212121;
+  background-color: transparent;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  border-color: whitesmoke;
+  /* z-index: 1000; */
+}
+
+button a {
+  color: black;
+  font-weight: 600;
+}
+
+.swiper-pagination span {
+  background: #fff;
+}
+
+/* Nav */
+
+.nav {
+
+  /* J'ai enlevé la position fixed, pas sur qu'elle soit utile en dehors de l'accueil */
+  /* position: fixed; */
+
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* padding: 20px 0; */
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+/* Rajout de 3 div .divAjustement pour centrer logo*/
+
+.divAjustement {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Fin de l'ajout */
+
+.Reservation {
+  font-size: 2.2rem;
+}
+
+/* Insertion Logo */
+
+nav .Logo {
+  height: 100%;
+  width: 100%;
+}
+
+nav .Logo a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav .Logo img {
+  max-height: 90%;
+}
+
+/* Fin Insertion Logo */
+
+.menu-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+  color: #fff;
+  font-size: 2.2rem;
+  /* J'ai enlevé la position absolute car le menu n'apparait pas si on enlève la postion fixed de la nav et le transform gène le placement*/
+  /* position: absolute; */
+  /* transform: translateY(-50%); */
+  top: 50%;
+  right: 2.5rem;
+  cursor: pointer;
+  z-index: 1;
+  width: 100%;
+}
+
+.fa-times {
+  display: none;
+}
+
+.nav::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: scale(0);
+  transition: opacity .5s;
+}
+
+.open .fa-times {
+  display: block;
+}
+
+.open .fa-bars {
+  display: none;
+}
+
+.open .nav-list {
+  transform: translateX(0);
+}
+
+.open .nav::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-right: -2px;
+  transition: color.5s;
+}
+
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: #252525;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  transform: translateX(100%);
+  transition: transform .5s;
+}
+
+.Languages {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.side-nav {
+  height: 100vh;
+  width: 0%;
+  position: fixed;
+  /* z-index: 1; */
+  top: 0;
+  left: 0;
+  background-color: #252525;
+  opacity: 1;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Form */
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* **************STYLE FORM *************************/
+
+.wrapper {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.wrapper .title {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #AA843B;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrapper .form {
+  width: 100%;
+}
+
+.wrapper .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .form .inputfield label {
+  width: 200px;
+  color: black;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.wrapper .form .inputfield .input, .wrapper .form .inputfield .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+
+.wrapper .form .inputfield .custom_select {
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+.wrapper .form .inputfield .custom_select:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+  pointer-events: none;
+}
+
+.wrapper .form .inputfield .custom_select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+.wrapper .form .inputfield .input:focus, .wrapper .form .inputfield .textarea:focus, .wrapper .form .inputfield .custom_select select:focus {
+  border: 1px solid #AA843B;
+}
+
+.wrapper .form .inputfield p {
+  font-size: 14px;
+  color: #757575;
+}
+
+.wrapper .form .inputfield .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background: #AA843B;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+}
+
+.wrapper .form .inputfield .btn:hover {
+  background: #ffd658;
+}
+
+.wrapper .form .inputfield:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width:420px) {
+  .wrapper .form .inputfield {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper .form .inputfield label {
+    margin-bottom: 5px;
+  }
+  .wrapper .form .inputfield.terms {
+    flex-direction: row;
+  }
+
+  nav .Logo {
+    display: none;
+  }
+}
+
+/* Modif Affichage taille title de la réservation */
+@media (min-width:426px) {
+
+  .wrapper .title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #AA843B;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+}
+/* Fin modif */
+
+
+
+
+
+
+/* <---------------------------------------------------------> */
+/* <---------------------------------------------------------> */
+/* <---------------------------------------------------------> */
+
+
+
+
+
+
+/* Début Css Footer */
+
+/* <---------------------------------------------------------> */
+
+/* Début Css Footer Laptop */
+
+@media screen and (min-width:1023px) {
+  footer p {
+      text-align: left;
+  }
+
+  footer .logo {
+      display: none;
+  }
+
+   footer .bottom {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 0;
+  }
+
+   footer .contact {
+      border-left: 2px solid #AA843B;
+      border-right: 2px solid #AA843B;
+      height: fit-content;
+      margin: 2px;
+      padding: 0 10rem;
+      border-top: none;
+      border-bottom: none;
+  }
+
+   footer .socialmedia {
+      margin: auto 0;
+      margin-bottom: 3rem;
+  }
+}
+
+/* Fin Css Footer Laptop */
+
+
+/* <---------------------------------------------------------> */
+
+
+/* Début Css Footer Mobile */
+
+/* @import url("../../fonts.css"); */
+
+html body footer {
+  margin: 0;
+  padding: 0;
+  background-color:#202020;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;    
+  align-items: center; 
+  font-family: 'Old Standard TT';   
+}
+
+footer .logo {
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+footer .address, .contact {
+  margin-bottom: 1rem;
+}
+
+footer p {
+  text-align: center;
+  margin: 0.3rem;
+  color: white;
+  background-color:#202020;
+}
+
+footer .bottom {
+  margin: 1rem 0;
+}
+
+footer .socialmedia {
+  text-align: center;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer ul li {
+  display: inline-block;
+  width: 40px;
+}
+
+footer ul li a {
+  color: rgb(255, 255, 255);
+}
+
+footer .contact {
+  border-top: 2px solid #AA843B;
+  border-bottom: 2px solid #AA843B;
+  height: fit-content;
+  
+}
+
+/* Fin Css Footer Mobile */
+
+
+/* <---------------------------------------------------------> */
+
+
+/* Fin Css Footer */

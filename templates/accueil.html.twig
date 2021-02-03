@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        
+        <link rel="stylesheet" href="{{ asset('/assets/css/accueil.css') }}">
+       
+
+        <link rel="icon" type="image/png" href="{{ asset('/assets/images/Logo_type3.png') }}" sizes="16x16"/>
+
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+        
+        <script src="{{ asset('/assets/js/accueil.js') }}" defer></script>
+        
+
+
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="container">
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">Réservation
+                </a>
+            </span>
+
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+
+                <div class="wrapper">
+                <div class="title">
+                    Réservation
+                </div>
+                <form class="form" action="" method="POST">
+                    <input type="text" name="id" id="id" value="<?php echo $id; ?>" hidden>
+                    <div class="inputfield">
+                    <label>Prenom</label>
+                    <input type="text" class="input" name="prenom">
+                    </div>
+                    <div class="inputfield">
+                    <label>Nom</label>
+                    <input type="text" class="input" name="nom">
+                    </div>
+                    <div class="inputfield">
+                    <label>Address mail</label>
+                    <input type="text" class="input" name="adress">
+                    </div>
+                    <div class="inputfield">
+                    <label>Telephone</label>
+                    <input type="text" class="input" name="telephone">
+                    </div>
+                    <div class="inputfield">
+                    <label>Nombre de personne</label>
+                    <div class="custom_select">
+                        <select name="person">
+                        <option value="1">1 person</option>
+                        <option value="2">2 persons</option>
+                        <option value="3">3 persons</option>
+                        <option value="4">4 persons</option>
+                        <option value="5">5 persons</option>
+                        <option value="6">6 persons</option>
+                        <option value="7">+ 7 persons</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="inputfield">
+                    <label>Date </label>
+                    <input type="date" class="input" name="date">
+                    </div>
+                    <div class="inputfield">
+                    <label> Horaire </label>
+                    <input class="input" type="time" name="horaire">
+                    </div>
+                    <div class="inputfield">
+                    <label>Allergies</label>
+                    <textarea class="textarea" name="allergies"></textarea>
+                    </div>
+
+                    <div class="inputfield">
+                    <input type="submit" value="Confirmation" class="btn">
+                    </div>
+                </form>
+                </div>
+            </div>
+
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <ul class="nav-list">
+
+                <li class="nav-item">
+                <a href="index.html" class="nav-link">ACCUEIL</a>
+                </li>
+
+                <li class="nav-item">
+                <a href="#" class="nav-link">LE RESTAURANT</a>
+                </li>
+
+                <li class="nav-item">
+                <a href="#" class="nav-link">RESERVATION</a>
+                </li>
+
+                <li class="nav-item">
+                <a href="#" class="nav-link">CLICK AND COLLECT</a>
+                </li>
+
+                <li class="nav-item">
+                <a href="#" class="nav-link">CONTACT</a>
+                </li>
+
+                <li class="nav-item">
+                <a href="{{ path('mentionslegales') }}" class="nav-link">MENTIONS LEGALES</a>
+                </li>
+
+                <div class="Languages">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> FR </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> EN </a>
+                </li>
+                </div>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="{{ asset('assets/images/1.jpg') }}">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="{{ asset('assets/images/Restaurant.jpg') }}">
+                            <div class="button">
+                            <button><a href="#">LE RESTAURANT</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="{{ asset('assets/images/Reservation.jpg') }}">
+
+                            <div class="button">
+                            <button><a href="#">RESERVATION</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="{{ asset('assets/images/Wine.jpg')}}">
+
+                            <div class="button">
+                            <button><a href="#">CLICK AND COLLECT</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="img-box">
+                            <img src="{{ asset('assets/images/contact.jpg') }}">
+
+                            <div class="button">
+                            <button><a href="#">CONTACT</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+            <img src="{{ asset('assets/images/Logo_type3.png') }}" class="logo">
+        </main>
+
+    </body>
+
+</html>
