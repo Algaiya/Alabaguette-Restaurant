@@ -1,16 +1,3 @@
-/* Début header */
-
-nav {
-    font-family: 'Bebas Neue', arial;
-    font-size: 1.3rem;
-}
-
-nav img {
-    max-height: 47px;
-}
-
-/* Fin header */
-
 /* Début main */
 
 main {
@@ -27,24 +14,26 @@ main .containerMain {
     flex-direction: column;
 }
 
-h1 {
+main h1 {
     font-family: 'Bebas Neue', arial;
     font-size: 1.5rem;
     color: #202020;
+    font-weight: normal;
 }
 
-h2 {
+main h2 {
     font-family: 'Bebas Neue', arial;
     font-size: 1.3rem;
     color: #202020;
+    font-weight: normal;
     text-decoration: underline;
 }
 
-p {
+main p {
     font-family: 'Old Standard TT Regular', arial;
 }
 
-.ulMentions {
+main .ulMentions {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -57,59 +46,11 @@ main li {
     list-style: none
 }
 
-hr {
-    background-color:#AA843B ;
+main hr {
+    height: 1px;
     width: 80%;
+    border: none;
+    background-color:#AA843B;
 }
 
 /* Fin main */
-
-/* Début footer */
-
-.footer1 {
-    font-family: 'Bebas Neue', arial;
-    height: 112px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-a {
-    color: #FFFFFF;
-}
-
-a:hover {
-    color: #AA843B;
-}
-
-footer .footContact p {
-    height: 70px;
-    font-size: 0.9rem;
-}
-
-footer .footContact {
-    height: 70px;
-    width: 32%;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer i {
-    margin-left: 20px;
-    font-size: 30px;
-}
-
-
-
-footer .copyright {
-    height: 16px;
-    font-size: 0.7rem;
-}
-
-footer .container-fluid {
-    /* Créé dans le seul but de mettre la même couleur sur la nav et le footer */
-    background-color: #202020;
-    /* Pensez à ajouter une opacity pour la tranparence selon la nav */
-    color: #ffffff;
-}
-/* Fin footer */

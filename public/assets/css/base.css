@@ -114,7 +114,7 @@ nav .Logo img {
 .menu-toggle {
   display: flex;
   justify-content: flex-end;
-  margin-right: 5%;
+  padding-right: 0.3em;
   color: #fff;
   font-size: 2.2rem;
   /* J'ai enlevé la position absolute car le menu n'apparait pas si on enlève la postion fixed de la nav et le transform gène le placement*/
