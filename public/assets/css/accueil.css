@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -236,134 +235,126 @@ button a {
   z-index: 9;
 }
 
-/* **************STYLE FORM *************************/
 
-.wrapper {
-  max-width: 500px;
-  width: 100%;
-  background: #fff;
-  margin: 50px auto;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
-  padding: 30px;
-  font-family: 'Bebas Neue', cursive;
-}
-
-.wrapper .title {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #AA843B;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.wrapper .form {
-  width: 100%;
-}
-
-.wrapper .form .inputfield {
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.wrapper .form .inputfield label {
-  width: 200px;
-  color: black;
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.wrapper .form .inputfield .input, .wrapper .form .inputfield .textarea {
-  width: 100%;
-  outline: none;
-  border: 1px solid #d5dbd9;
-  font-size: 15px;
-  padding: 8px 10px;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-.wrapper .form .inputfield .textarea {
-  width: 100%;
-  height: 125px;
-  resize: none;
-}
-
-.wrapper .form .inputfield .custom_select {
-  position: relative;
-  width: 100%;
-  height: 37px;
-}
-
-.wrapper .form .inputfield .custom_select:before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  border: 8px solid;
-  border-color: #d5dbd9 transparent transparent transparent;
-  pointer-events: none;
-}
-
-.wrapper .form .inputfield .custom_select select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  border: 0px;
-  padding: 8px 10px;
-  font-size: 15px;
-  border: 1px solid #d5dbd9;
-  border-radius: 3px;
-}
-
-.wrapper .form .inputfield .input:focus, .wrapper .form .inputfield .textarea:focus, .wrapper .form .inputfield .custom_select select:focus {
-  border: 1px solid #AA843B;
-}
-
-.wrapper .form .inputfield p {
-  font-size: 14px;
-  color: #757575;
-}
-
-.wrapper .form .inputfield .btn {
-  width: 100%;
-  padding: 8px 10px;
-  font-size: 15px;
-  border: 0px;
-  background: #AA843B;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 3px;
-  outline: none;
-}
-
-.wrapper .form .inputfield .btn:hover {
-  background: #ffd658;
-}
-
-.wrapper .form .inputfield:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width:420px) {
-  .wrapper .form .inputfield {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .wrapper .form .inputfield label {
-    margin-bottom: 5px;
-  }
-  .wrapper .form .inputfield.terms {
-    flex-direction: row;
-  }
-}
 
 @media only screen and (max-width: 480px) {
   .nav-list {
     width: 100%;
+  }
+}
+
+/* Histoire */
+
+/*---- BARRES DE SÉPARATION ----*/
+
+.barre {
+  background-color: #202020;
+  border: 2px solid #3f3f3f;
+  margin-top: 50px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.barre1 {
+  background-color: #202020;
+  border: 2px solid #3f3f3f;
+  width: 50%;
+  margin-left: 25%;
+}
+
+/*---- TEXTE DÉFILANT ----*/
+
+.mentionCoVid {
+  margin: 0 auto;
+}
+
+.texte_defilant {
+  height: 40px;
+  width: 900px;
+  font-family: "Old_Standard", sans-serif;
+  color: #202020;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*---- HISTOIRE ----*/
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main h1 {
+  color: #E3B951;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.rest_title {
+  margin-top: 32px;
+  height: 120px;
+  text-align: center;
+}
+
+.rest_covid {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.rest_story {
+  border: 1px solid #E3B951;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.rest_story p {
+  color: #202020;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+
+#foo {
+  color: #202020;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+
+/*---- CAROUSEL ----*/
+
+.derouleur_image {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+/*---- MEDIA QUERIES ----*/
+
+@media screen and (max-width: 768px) {
+  .mentionCoVid {
+    width: 80%;
+  }
+  .texte_defilant {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 812px) {
+  .mentionCoVid {
+    width: 80%;
+  }
+  .texte_defilant {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .rest_covid h1 {
+    font-size: 25px;
   }
 }

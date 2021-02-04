@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+
 
 <html lang="fr">
 
@@ -26,67 +26,9 @@
         <nav class="nav">
             <div class="container">
             <span class="open-slide">
-                <a href="#" onclick="openSlideMenu()">Réservation
+                <a href="{{ path('reservation') }}" onclick="openSlideMenu()">Réservation
                 </a>
             </span>
-
-            <div id="side-menu" class="side-nav">
-                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-
-                <div class="wrapper">
-                <div class="title">
-                    Réservation
-                </div>
-                <form class="form" action="" method="POST">
-                    <input type="text" name="id" id="id" value="<?php echo $id; ?>" hidden>
-                    <div class="inputfield">
-                    <label>Prenom</label>
-                    <input type="text" class="input" name="prenom">
-                    </div>
-                    <div class="inputfield">
-                    <label>Nom</label>
-                    <input type="text" class="input" name="nom">
-                    </div>
-                    <div class="inputfield">
-                    <label>Address mail</label>
-                    <input type="text" class="input" name="adress">
-                    </div>
-                    <div class="inputfield">
-                    <label>Telephone</label>
-                    <input type="text" class="input" name="telephone">
-                    </div>
-                    <div class="inputfield">
-                    <label>Nombre de personne</label>
-                    <div class="custom_select">
-                        <select name="person">
-                        <option value="1">1 person</option>
-                        <option value="2">2 persons</option>
-                        <option value="3">3 persons</option>
-                        <option value="4">4 persons</option>
-                        <option value="5">5 persons</option>
-                        <option value="6">6 persons</option>
-                        <option value="7">+ 7 persons</option>
-                        </select>
-                    </div>
-                    </div>
-                    <div class="inputfield">
-                    <label>Date </label>
-                    <input type="date" class="input" name="date">
-                    </div>
-                    <div class="inputfield">
-                    <label> Horaire </label>
-                    <input class="input" type="time" name="horaire">
-                    </div>
-                    <div class="inputfield">
-                    <label>Allergies</label>
-                    <textarea class="textarea" name="allergies"></textarea>
-                    </div>
-
-                    <div class="inputfield">
-                    <input type="submit" value="Confirmation" class="btn">
-                    </div>
-                </form>
-                </div>
             </div>
 
             <div class="menu-toggle">
@@ -101,11 +43,11 @@
                 </li>
 
                 <li class="nav-item">
-                <a href="#" class="nav-link">LE RESTAURANT</a>
+                <a href="{{ path('histoire') }}" class="nav-link">LE RESTAURANT</a>
                 </li>
 
                 <li class="nav-item">
-                <a href="#" class="nav-link">RESERVATION</a>
+                <a href="{{ path('reservation') }}" class="nav-link">RESERVATION</a>
                 </li>
 
                 <li class="nav-item">
@@ -183,9 +125,10 @@
 
                 <div class="swiper-pagination"></div>
             </div>
+            
             <img src="{{ asset('assets/images/Logo_type3.png') }}" class="logo">
-        </main>
-
+            
+    </main>
     </body>
 
 </html>

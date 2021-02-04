@@ -65,4 +65,11 @@ menuToggler.addEventListener('click', function () {
 
   function closeSlideMenu() {
     document.getElementById('side-menu').style.width = '0';
-  }
+	}
+	
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".navbar-fixed-top");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
