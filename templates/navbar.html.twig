@@ -8,11 +8,11 @@
                         </div>
                     
                         <!-- Mise en place logo -->
-                        <div class="divAjustement">
+                        {# <div class="divAjustement"> #}
                             <div class="Logo">
                                 <a href="{{ path('index') }}"><img src="{{ asset('assets/images/Logo-type1.png') }}" alt="Logo du restaurant A la baguette"></a>      
                             </div>
-                        </div>
+                        {# </div> #}
                     <!-- Fin Logo -->
                     
                     <div class="divAjustement">
@@ -37,11 +37,11 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a href="#}" class="nav-link">CLICK AND COLLECT</a>
+                            <a href="#" class="nav-link">CLICK AND COLLECT</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a href="#" class="nav-link">CONTACT</a>
+                            <a href="{{ path('contact') }}" class="nav-link">CONTACT</a>
                         </li>
                         
                         <li class="nav-item">

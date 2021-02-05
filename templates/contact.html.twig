@@ -3,6 +3,9 @@
 {% block JsEnfants %}
 <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
 {% endblock %}
+{% block CssEnfants %}
+  <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
+{% endblock %}
 
 {% block main %}
     <div class="conteneurContact">
@@ -29,13 +32,5 @@
  {% endblock %}
 
 {% block footer %}
- <section>
-        <div class="socialmedia">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>   
-        <p>&copy; 2021 A la Baguette.com Tous droits réservés. Mentions légales.</p>
-    </section> 
- {% endblock %}
- 
+
+{% endblock %} 
