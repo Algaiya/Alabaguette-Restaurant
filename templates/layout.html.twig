@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         {% include 'linkcss.html.twig' %}
-
+        
+        {% block CssContact %}{% endblock %}
         {% block LinkEnfants %}{% endblock %}
         {% block CssEnfants %}{% endblock %}
         {% block JsEnfants %}{% endblock %}
@@ -16,12 +17,12 @@
         <link rel="icon" type="image/png" href="{{ asset('/assets/images/Logo_type2-01.png') }}" sizes="16x16"/>
 
     </head>
+    <header>
+        {% include 'navbar.html.twig' %}
+    </header>
 
-    <body style="margin-top: 0px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px;">
+    <body style="margin-top: 50px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px;">
 
-        <header>
-            {% include 'navbar.html.twig' %}
-        </header>
 
         <main>
             {% block main %}
@@ -33,9 +34,11 @@
             {% endblock %}
         </main>
 
-        <footer>
-            {% include 'footer.html.twig' %}
-        </footer>
+        {% block footer %}
+            <footer>
+                {% include 'footer.html.twig' %}
+            </footer>
+        {% endblock %}
 
     </body>
 
