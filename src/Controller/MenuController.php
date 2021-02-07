@@ -3,20 +3,22 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-class HistoireController extends AbstractController
+class MenuController extends AbstractController
 {
-
   /**
-   * @Route("/histoire", name="histoire")
+   * @Route("/menu", name="menu")
    * @Template
    */
-  public function histoire()
+  public function menu()
   {
+    $logo = false;
     return [
-      'controller_name' => 'HistoireController',
+      'controller_name' => 'MenuController',
+      'logo' => $logo
     ];
   }
 }
