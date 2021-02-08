@@ -1,17 +1,26 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
+    <div class="bg-light p-3">
+        <h1>Les produits</h1>
+    </div>
 
     {% for product in products %}
 
-    <div class="card" style="width: 18rem;">
-        <img src="{{product.image}}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{product.title}}</h5>
-            <p class="card-text">{{product.price}}€</p>
-            <a href="" class="btn btn-primary">Ajouter au panier</a>
+        <div class="flex flex-col justify-center items-center max-w-xs mx-20 my-8">
+             <div class="bg-black-300 h-68 w-full rounded-lg bg-cover bg-center"><img src="{{product.image}}"></div>
+                <div class="w-56 md:w-64 bg-white -mt-10 shadow-lg rounded-lg overflow-hidden">
+                    <div class="py-1 text-center text-xS font-bold uppercase tracking-wide text-black-800">{{product.title}}</div>
+                        <div class="flex items-center justify-between py-2 px-3 bg-yellow-600">
+                            <h1 class="text-white text-xl font-bold ">{{product.price}}€</h1>
+                                <button type="submit" name="add_to_cart" class=" bg-white text-xs text-white px-1 py-1 font-semibold rounded uppercase " value="Add to Cart"><a href="{{ path('cart_add', {'id': product.id}) }}">Add to cart</a></button>
+                        </div>
+                </div>
         </div>
-    </div>
+     
+      
+    
+
 
     {%  endfor %}
 
