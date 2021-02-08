@@ -9,11 +9,10 @@ class MentionsLegalesController extends AbstractController
 {
 
   /**
-  * @Route("/mentionslegales", name="mentionslegales")
-  */
+   * @Route("/mentionslegales", name="mentionslegales")
+   */
   public function mentionslegales()
   {
     return $this->render('mentionslegales.html.twig');
   }
-  
 }

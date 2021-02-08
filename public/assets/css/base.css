@@ -253,6 +253,12 @@ nav .Logo img {
   margin-left: 50px;
 }
 
+@media only screen and (max-width: 480px) {
+  .nav-list {
+    width: 100%;
+  }
+}
+
 /* Form */
 
 .button {
@@ -327,6 +333,8 @@ footer {
 footer .logo {
   margin-top: 5rem;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
 footer .address, .contact {
@@ -419,7 +427,7 @@ footer .contact {
   flex-direction: column;
 } */
 
- h1 {
+h1 {
   color: #E3B951;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -492,3 +500,184 @@ footer .contact {
   }
 }
 
+/*** Slider ***/
+
+/* Slideshow container */
+
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: fit-content;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.dotplacement {
+  z-index: 1;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 10px;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+/** Menu/Carte **/
+
+/* Title */
+
+h5 {
+  text-align: center;
+  font-size: 1em;
+  margin-block-start: auto;
+  margin-block-end: 1rem;
+  font-family: 'BebasNeue';
+}
+
+/* Carte and scrollbar */
+
+.carte {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: solid 2px black;
+}
+
+.carte::-webkit-scrollbar {
+  width: 10px;
+  background: #f1f1f1;
+}
+
+.carte::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.carte::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+/*** Button style ***/
+
+.menu a {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+}
+
+.menu a span {
+  position: relative;
+  z-index: 2;
+  font-family: 'BebasNeue';
+}
+
+.menu a:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #AA843B;
+  transition: all .35s;
+}
+
+.menu a:hover {
+  color: #fff;
+}
+
+.menu a:hover:after {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../assets/font/bebas_neue/BebasNeue-Regular.eot');
+  src: url('../assets/font/bebas_neue/BebasNeue-Regular.ttf') format('truetype'), url("../assets/font/bebas_neue/BebasNeue-Regular.woff2") format("woff2"), url("../assets/fontbebas_neue/BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (min-width:767px) {
+  h5 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width:1023px) {
+  .slideshow-container {
+    display: none;
+  }
+  h5 {
+    font-size: 3em;
+  }
+  .carte {
+    height: 770px;
+    width: 80%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+}

@@ -18,25 +18,21 @@
 
     </head>
     <header>
-        {% include 'navbar.html.twig' %}
+        {% include 'include/navbar.html.twig' %}
     </header>
 
-    <body style="margin-top: 50px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px;">
+    <body style="margin-top: 100px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px;">
 
 
         <main>
             {% block main %}
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+             
             {% endblock %}
         </main>
 
         {% block footer %}
             <footer>
-                {% include 'footer.html.twig' %}
+                {% include 'include/footer.html.twig' %}
             </footer>
         {% endblock %}
 
