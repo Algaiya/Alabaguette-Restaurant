@@ -2,9 +2,16 @@
 
 {% block main %}
     <div class="bg-light p-3">
-        <h1>Les produits</h1>
+        <h1  style="text-align:center">Les produits</h1>
+            <div style="text-align:right">
+                <h1>Votre panier </h1>
+                <a href="{{ path('cart') }}" class="btn btn-light">
+                  <i class="fas fa-shopping-basket"></i>
+                </a>
+            </div>            
     </div>
 
+    <div class="flex flex-row justify-center flex-wrap">
     {% for product in products %}
 
         <div class="flex flex-col justify-center items-center max-w-xs mx-20 my-8">
@@ -17,11 +24,8 @@
                         </div>
                 </div>
         </div>
-     
-      
     
 
-
     {%  endfor %}
-
+</div>
 {% endblock %}

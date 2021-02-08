@@ -2,7 +2,15 @@
 
 {% block main %}
     <div class="bg-light p-3">
-        <h1>Votre panier</h1>
+        <h1 style="text-align:center">Votre panier</h1>
+            <div style="text-align:left">
+                <h1>Retour au menu</h1>
+                    <a href="{{ path('product') }}" class="btn btn-light">
+                        
+                            <i class="fas fa-arrow-circle-left"></i>
+                        
+                    </a>
+            </div>
     </div>
 
     {% if items | length > 0 %}
