@@ -280,7 +280,7 @@ nav .Logo img {
 
 /* Début Css Footer Laptop */
 
-@media screen and (min-width:1023px) {
+@media screen and (min-width:769px) {
   footer p {
     text-align: left;
   }
@@ -300,12 +300,17 @@ nav .Logo img {
     height: fit-content;
     margin: 2px;
     padding: 0 10rem;
-    border-top: none;
-    border-bottom: none;
   }
   footer .socialmedia {
     margin: auto 0;
     margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .contact {
+    border-top: 2px solid #AA843B ;
+    border-bottom: 2px solid #AA843B;
   }
 }
 
@@ -373,9 +378,7 @@ footer ul li a {
 }
 
 footer .contact {
-  border-top: 2px solid #AA843B;
-  border-bottom: 2px solid #AA843B;
-  height: fit-content;
+   height: fit-content;
 }
 
 /* Fin Css Footer Mobile */

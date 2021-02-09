@@ -20,21 +20,39 @@ class Category
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $category_title;
+    private $title;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Product::class, inversedBy="category")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $product;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getCategoryTitle(): ?string
+    public function getTitle(): ?string
     {
-        return $this->category_title;
+        return $this->title;
     }
 
-    public function setCategoryTitle(string $category_title): self
+    public function setTitle(string $title): self
     {
-        $this->category_title = $category_title;
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getProduct(): ?Product
+    {
+        return $this->product;
+    }
+
+    public function setProduct(?Product $product): self
+    {
+        $this->product = $product;
 
         return $this;
     }
