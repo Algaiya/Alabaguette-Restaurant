@@ -35,8 +35,11 @@ class CartService {
         $panier = $this->session->get('panier', []);
 
         if(!empty($panier[$id])) {
-            unset($panier[$id]);
+            $panier[$id]--;
+        } else {
+            $panier[$id] = 1;
         }
+        
         $this->session->set('panier', $panier);
     }
 

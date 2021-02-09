@@ -1,12 +1,18 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
+
+{{ form(categoryForm)}}
+
+
+
+
     <div class="bg-lightgrey p-3">
         <h1  style="text-align:center">Les produits</h1>
             <div style="text-align:right">
                 <h1>Votre panier </h1>
                 <a href="{{ path('cart') }}" class="btn btn-light">
-                  <i class="fas fa-shopping-basket"></i>
+                  <i class="fas fa-shopping-basket"></i>                          
                 </a>
             </div>            
     </div>
