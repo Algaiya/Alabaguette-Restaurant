@@ -35,13 +35,13 @@ class Product
     private $image;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="products")
+     * @ORM\OneToMany(targetEntity=Category::class, mappedBy="product")
      */
-    private $categories;
+    private $category;
 
     public function __construct()
     {
-        $this->categories = new ArrayCollection();
+        $this->category = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -88,15 +88,16 @@ class Product
     /**
      * @return Collection|Category[]
      */
-    public function getCategories(): Collection
+    public function getCategory(): Collection
     {
-        return $this->categories;
+        return $this->category;
     }
 
     public function addCategory(Category $category): self
     {
-        if (!$this->categories->contains($category)) {
-            $this->categories[] = $category;
+        if (!$this->category->contains($category)) {
+            $this->category[] = $category;
+            $category->setProduct($this);
         }
 
         return $this;
@@ -104,7 +105,12 @@ class Product
 
     public function removeCategory(Category $category): self
     {
-        $this->categories->removeElement($category);
+        if ($this->category->removeElement($category)) {
+            // set the owning side to null (unless already changed)
+            if ($category->getProduct() === $this) {
+                $category->setProduct(null);
+            }
+        }
 
         return $this;
     }

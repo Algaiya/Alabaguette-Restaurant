@@ -43,9 +43,14 @@ class Reservation
     private $date;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $allergies;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $num_table;
 
     public function getId(): ?int
     {
@@ -117,9 +122,21 @@ class Reservation
         return $this->allergies;
     }
 
-    public function setAllergies(?string $allergies): self
+    public function setAllergies(string $allergies): self
     {
         $this->allergies = $allergies;
+
+        return $this;
+    }
+
+    public function getNumTable(): ?string
+    {
+        return $this->num_table;
+    }
+
+    public function setNumTable(?string $num_table): self
+    {
+        $this->num_table = $num_table;
 
         return $this;
     }
