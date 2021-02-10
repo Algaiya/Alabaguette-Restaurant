@@ -20,8 +20,7 @@ class CategoryType extends AbstractType
                     'Dessert' => 3,
                     'Vin' => 4,                                 
                 ],
-            ]);
-            
+            ]); 
           
 
        

@@ -21,9 +21,11 @@ class ProductController extends AbstractController
         $form = $this->createForm(CategoryType::class, $category);
         $repo = $this->getDoctrine()->getRepository(Product::class);
         $product = $repo->findAll();
+        $category = $repo->findAll();
         return $this->render('product/product.html.twig', [
             'controller_name' => 'ProductController',
             'products' => $product,
+            'categories' => $category,
             'categoryForm' => $form->createView(),
         ]);
      
