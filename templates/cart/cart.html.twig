@@ -5,10 +5,8 @@
         <h1 style="text-align:center">Votre panier</h1>
             <div style="text-align:left">
                 <h1>Retour au menu</h1>
-                    <a href="{{ path('product') }}" class="btn btn-light">
-                        
-                            <i class="fas fa-arrow-circle-left"></i>
-                        
+                    <a href="{{ path('product') }}" class="btn btn-light">                        
+                            <i class="fas fa-arrow-circle-left"></i>                        
                     </a>
             </div>
     </div>
@@ -27,7 +25,7 @@
         <tbody>
             {% for item in items %}
                 <tr>
-                    <td>{{ item.product.title }}</td>                    
+                    <td>{{ item.product.name }}</td>                    
                     <td>{{ item.product.price }}€</td>
                     <td>{{ item.quantity }}</td>
                     <td>{{ item.product.price * item.quantity }}€</td>
