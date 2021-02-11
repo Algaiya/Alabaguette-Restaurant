@@ -1,29 +1,22 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-
-
-
-
-
-
-
-    <div class="flex flex-row bg-lightgrey p-3">
-    <h1  style="text-align:center">Les produits</h1>
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('entree')"> entree</button>
-  <button class="btn" onclick="filterSelection('plat')"> plats</button>
-  <button class="btn" onclick="filterSelection('dessert')">dessert</button>
-  <button class="btn" onclick="filterSelection('vin')">vin</button>
-</div>
-            <div style="">
+    <h1 style="text-align:center">Les produits</h1>
+        <div class="flex flex-row bg-lightgrey p-3 justify-content-between">             
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')">Carte</button>
+                <button class="btn" onclick="filterSelection('entree')">Entrée</button>
+                <button class="btn" onclick="filterSelection('plat')">Plats</button>
+                <button class="btn" onclick="filterSelection('dessert')">Dessert</button>
+                <button class="btn" onclick="filterSelection('vin')">Vin</button>
+            </div>
+            <div>
                 <h1>Votre panier </h1>
                 <a href="{{ path('cart') }}" class="btn btn-light">
-                  <i class="fas fa-shopping-basket"></i>
+                <i class="fas fa-shopping-basket"></i>
                 </a>
-            </div>            
-    </div>
+            </div>                      
+        </div>
 
     <div class="flex flex-row justify-center flex-wrap">
     {% for category in categories %} 
