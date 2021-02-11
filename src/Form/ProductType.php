@@ -12,19 +12,19 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ProductType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
-        $builder
-            ->add('category', EntityType::class, [
-                'class' => Category::class,
-                'choice_label' => 'title'
-            ]);
-    }
+    // public function buildForm(FormBuilderInterface $builder, array $options)
+    // {
+    //     $builder
+    //         ->add('category', EntityType::class, [
+    //             'class' => Category::class,
+    //             'choice_label' => 'title'
+    //         ]);
+    // }
 
     public function configureOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults([
-            'data_class' => Product::class,
-        ]);
+        // $resolver->setDefaults([
+        //     'data_class' => Product::class,
+        // ]);
     }
 }

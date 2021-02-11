@@ -2,8 +2,14 @@
 
 {% block main %}
 
-{{ form(productForm) }}
 
+
+
+
+
+
+    <div class="flex flex-row bg-lightgrey p-3">
+    <h1  style="text-align:center">Les produits</h1>
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('entree')"> entree</button>
@@ -11,12 +17,7 @@
   <button class="btn" onclick="filterSelection('dessert')">dessert</button>
   <button class="btn" onclick="filterSelection('vin')">vin</button>
 </div>
-
-
-
-    <div class="bg-lightgrey p-3">
-        <h1  style="text-align:center">Les produits</h1>
-            <div style="text-align:right">
+            <div style="">
                 <h1>Votre panier </h1>
                 <a href="{{ path('cart') }}" class="btn btn-light">
                   <i class="fas fa-shopping-basket"></i>
@@ -27,7 +28,7 @@
     <div class="flex flex-row justify-center flex-wrap">
     {% for category in categories %} 
         
-     <div class="container">
+     <div class="flex flex-col justify-center items-center ">
      <div class="filterDiv {{category.category.title}}">
         <div class="flex flex-col justify-center items-center max-w-xs mx-20 my-8">
              <div class="bg-black-300 h-68 w-full rounded-lg bg-cover bg-center"><img src="{{category.image}}"></div>
