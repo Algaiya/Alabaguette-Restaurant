@@ -11,20 +11,17 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CategoryType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
-        $builder->add('title', ChoiceType::class, [
-                'choices' => [
-                    'Entrée' => 1,
-                    'Plat' => 2,
-                    'Dessert' => 3,
-                    'Vin' => 4,                                 
-                ],
-            ]); 
-          
-
-       
-    }
+    // public function buildForm(FormBuilderInterface $builder, array $options)
+    // {
+    //     $builder->add('title', ChoiceType::class, [
+    //         'choices' => [
+    //             'Entrée' => 1,
+    //             'Plat' => 2,
+    //             'Dessert' => 3,
+    //             'Vin' => 4,
+    //         ],
+    //     ]);
+    // }
 
     public function configureOptions(OptionsResolver $resolver)
     {
@@ -32,5 +29,4 @@ class CategoryType extends AbstractType
             'data_class' => Category::class,
         ]);
     }
-
 }
