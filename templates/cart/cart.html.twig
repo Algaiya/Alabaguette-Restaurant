@@ -11,7 +11,7 @@
             </div>
     </div>
 
-    {% if items | length > 0 %}
+   {% if items | length > 0 %}
     <table class="table">
         <thead>
             <tr>
@@ -35,7 +35,7 @@
                         </a>
                     </td>
                 </tr>
-                {% endfor %}
+            {% endfor %}
         </tbody>
         <tfoot>
             <tr>
@@ -48,7 +48,7 @@
     </table>
      {% else  %}
         <p>Votre panier est vide</p>
-      {% endif  %}
+      {% endif %}
 
    
 {% endblock %}
