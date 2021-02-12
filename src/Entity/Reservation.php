@@ -50,7 +50,7 @@ class Reservation
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $num_table;
+    private $numTable;
 
     public function getId(): ?int
     {
@@ -131,12 +131,12 @@ class Reservation
 
     public function getNumTable(): ?string
     {
-        return $this->num_table;
+        return $this->numTable;
     }
 
-    public function setNumTable(?string $num_table): self
+    public function setNumTable(?string $numTable): self
     {
-        $this->num_table = $num_table;
+        $this->numTable = $numTable;
 
         return $this;
     }
