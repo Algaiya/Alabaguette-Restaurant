@@ -1,0 +1,41 @@
+/*----- FORM STYLIZATION -----*/
+
+    #reservation {
+        margin: 0 30%;
+    }
+
+    #reservation_Submit {
+        margin-top: 15px;
+        margin-left: 40%;
+        width: 25%;
+        background-color: #AA843B;
+        border: #AA843B;
+        position: absolute;
+        top: 180%;
+        right: 37%;
+    }
+
+
+/*------------ 
+MEDIAS QUERIES 
+--------------*/
+    @media screen and (max-width: 1024px) {
+        #reservation_Submit {
+            top: 220%;
+            right: 37%;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        #reservation_Submit {
+            top: 204%;
+            right: 37%;
+        }
+    }
+
+    @media screen and (min-width: 425px) {
+        #reservation_Submit {
+            top: 173%;
+            right: 37%;
+        }
+    }
