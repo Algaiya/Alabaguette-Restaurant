@@ -32,7 +32,7 @@ class ReservationController extends AbstractController
             $entityManger->flush();
         }
 
-        return $this->render('reservation.html.twig', [
+        return $this->render('réservation/reservation.html.twig', [
             'reservationForm' => $form->createView()
         ]);
     }
