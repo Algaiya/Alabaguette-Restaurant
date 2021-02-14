@@ -20,7 +20,7 @@ class ReservationType extends AbstractType
             ->add('firstname', TextType::class)
             ->add('lastname', TextType::class)
             ->add('phone', IntegerType::class)
-            ->add('nbperson', IntegerType::class)
+            ->add('nbperson', IntegerType::class, ['label' => 'Nombre de personne'])
             ->add('date', DateTimeType::class)
             ->add('allergies', TextareaType::class)
             ->add('Submit', SubmitType::class);
