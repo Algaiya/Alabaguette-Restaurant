@@ -49,28 +49,7 @@ html {
     font-family: 'Old Standard TT'
   }
   
-  @font-face {
-    font-family: 'Bebas Neue';
-    src: url('../assets/bebas_neue/BebasNeue-Regular.eot');
-    src: url('../assets/bebas_neue/BebasNeue-Regular.ttf') format('truetype'),
-        url("../assets/bebas_neue/BebasNeue-Regular.woff2") format("woff2"),
-        url("../assets/bebas_neue/BebasNeue-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  
-  @font-face {
-    font-family: 'Old Standard TT';
-    src: url('../assets/font/Old_Standard_TT/OldStandardTT-Regular.ttf') format('truetype'),
-        url('../assets/font/Old_Standard_TT/OldStandardTT-Italic.ttf') format('truetype'),  
-        url('../assets/font/Old_Standard_TT/OldStandardTT-Bold.ttf') format('truetype');  
-    font-weight: normal;
-    font-style: normal;
-  }
-  
   @media screen and (min-width:767px) {    
-    h5 {font-size: 2em;} 
     .conteneurContact {flex-direction: column; justify-content: space-around;}  
     footer {font-size: 80%;}    
   }

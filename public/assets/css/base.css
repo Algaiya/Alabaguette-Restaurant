@@ -11,6 +11,12 @@ p, i, span {
   font-family: 'Old Standard TT';
 }
 
+h1 {
+  color: #AA843B;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+}
+
 /* Page slider */
 
 .swiper-container {
@@ -20,7 +26,6 @@ p, i, span {
 }
 
 .swiper-slide .img-box img {
-  /* J'ai remplacé le chemin .swiper-slide, img, .img-box par ce qu'il y a au-dessus pour pouvoir modifier le logo */
   width: 100%;
   height: 100%;
   position: relative;
@@ -35,7 +40,6 @@ p, i, span {
   border-radius: 50px;
   font-size: 1.5rem;
   border-color: whitesmoke;
-  /* z-index: 10; */
 }
 
 button a {
@@ -54,7 +58,6 @@ button a {
 /* Nav */
 
 .nav {
-  /* J'ai enlevé la position fixed, pas sur qu'elle soit utile en dehors de l'accueil  */
   position: fixed;
   background-color: #222;
   top: 0;
@@ -73,7 +76,6 @@ button a {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  /* padding: 20px 0; */
 }
 
 .nav a {
@@ -81,8 +83,6 @@ button a {
   text-decoration: none;
   padding: 7px 15px;
 }
-
-/* Rajout de 3 div .divAjustement pour centrer logo*/
 
 .divAjustement {
   width: 33%;
@@ -119,11 +119,9 @@ nav .Logo img {
 
 .menu-toggle {
   display: flex;
-  /* justify-content: flex-end; */
   padding-right: 0.3em;
   color: #fff;
   font-size: 2.2rem;
-  /* J'ai enlevé la position absolute car le menu n'apparait pas si on enlève la postion fixed de la nav et le transform gène le placement*/
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -197,11 +195,6 @@ nav .Logo img {
   opacity: 90%;
 }
 
-.Languages {
-  display: flex;
-  justify-content: center;
-}
-
 .navbar a {
   float: left;
   display: block;
@@ -257,7 +250,7 @@ nav .Logo img {
   margin-left: 50px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
   .nav-list {
     width: 100%;
   }
@@ -395,49 +388,38 @@ footer .contact {
 
 /*---- BARRES DE SÉPARATION ----*/
 
-.barre {
-  background-color: #202020;
-  border: 2px solid #3f3f3f;
-  margin-top: 50px;
-  width: 50%;
-  margin-left: 25%;
-}
+  .barre {
+    background-color: #202020;
+    border: 2px solid #3f3f3f;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 25%;
+  }
 
-.barre1 {
-  background-color: #202020;
-  border: 2px solid #3f3f3f;
-  width: 50%;
-  margin-left: 25%;
-}
+  .barre1 {
+    background-color: #202020;
+    border: 2px solid #3f3f3f;
+    width: 50%;
+    margin-left: 25%;
+  }
 
 /*---- TEXTE DÉFILANT ----*/
 
-.mentionCoVid {
-  margin: 0 auto;
-}
+  .mentionCoVid {
+    margin: 0 auto;
+  }
 
-.texte_defilant {
-  height: 40px;
-  width: 900px;
-  font-family: "Old_Standard", sans-serif;
-  color: #202020;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-}
+  .texte_defilant {
+    height: 40px;
+    width: 900px;
+    font-family: "Old_Standard", sans-serif;
+    color: #202020;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
 
 /*---- HISTOIRE ----*/
-
-/* main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-} */
-
-h1 {
-  color: #AA843B;
-  font-family: "Bebas Neue", sans-serif;
-}
 
 .rest_title {
   margin-top: 32px;
@@ -550,9 +532,9 @@ h1 {
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
@@ -574,16 +556,6 @@ h1 {
 }
 
 /** Menu/Carte **/
-
-/* Title */
-
-h5 {
-  text-align: center;
-  font-size: 1em;
-  margin-block-start: auto;
-  margin-block-end: 1rem;
-  font-family: 'BebasNeue';
-}
 
 /* Carte and scrollbar */
 
@@ -638,7 +610,6 @@ h5 {
 .menu a span {
   position: relative;
   z-index: 2;
-  font-family: 'BebasNeue';
 }
 
 .menu a:after {
@@ -660,27 +631,11 @@ h5 {
   width: 100%;
 }
 
-@font-face {
-  font-family: 'BebasNeue';
-  src: url('../assets/font/bebas_neue/BebasNeue-Regular.eot');
-  src: url('../assets/font/bebas_neue/BebasNeue-Regular.ttf') format('truetype'), url("../assets/font/bebas_neue/BebasNeue-Regular.woff2") format("woff2"), url("../assets/fontbebas_neue/BebasNeue-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (min-width:767px) {
-  h5 {
-    font-size: 2em;
-  }
-}
-
 @media screen and (min-width:1023px) {
   .slideshow-container {
     display: none;
   }
-  h5 {
-    font-size: 3em;
-  }
+
   .carte {
     height: 770px;
     width: 80%;
@@ -695,17 +650,8 @@ h5 {
 
 .filterDiv {
   float: left;
-  /* background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px; */
   display: none;
-  /* Hidden by default */
 }
-
-/* The "show" class is added to the filtered elements */
 
 .show {
   display: block;
@@ -721,13 +667,9 @@ h5 {
   cursor: pointer;
 }
 
-/* Add a light grey background on mouse-over */
-
 .btn:hover {
   background-color: #ddd;
 }
-
-/* Add a dark background to the active button */
 
 .btn.active {
   background-color: #666;

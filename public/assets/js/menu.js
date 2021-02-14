@@ -1,4 +1,4 @@
-/*** Slider ***/
+/*** Slider Carte ***/
 
 let slideIndex = 0;
 showSlides();

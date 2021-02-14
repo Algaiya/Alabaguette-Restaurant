@@ -1,24 +1,4 @@
-var mySwiper = new Swiper('.swiper-container', {
-
-    // Optional parameters
-
-    direction: 'horizontal',
-
-    loop: true,
-
-  
-
-    // If we need pagination
-
-    pagination: {
-
-      el: '.swiper-pagination',
-
-    },
-
-})
-  
-
+/*----- MENU JS -----*/ 
 const selectElement = function (element) {
   return document.querySelector(element);
 };
@@ -38,20 +18,18 @@ menuToggler.addEventListener('click', function () {
     document.getElementById('side-menu').style.width = '0';
 }
 
-
+/*----- CLICK & COLLECT: FILTRES DE SÉLECTION -----*/ 
 filterSelection("all")
 function filterSelection(c) {
   let x, i;
   x = document.getElementsByClassName("filterDiv");
   if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
   }
 }
 
-// Show filtered elements
 function AddClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -63,7 +41,6 @@ function AddClass(element, name) {
   }
 }
 
-// Hide elements that are not selected
 function RemoveClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -76,7 +53,6 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current control button (highlight it)
 let btnContainer = document.getElementById("myBtnContainer");
 let btns = btnContainer.getElementsByClassName("btn");
 for (let i = 0; i < btns.length; i++) {
@@ -86,6 +62,3 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
-
-  
