@@ -30,8 +30,6 @@ class ReservationController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManger->persist($reservation);
             $entityManger->flush();
-
-            return new Response('Reservation  ' . $reservation->getFirstname() . ' complete');
         }
 
         return $this->render('reservation.html.twig', [
