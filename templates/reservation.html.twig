@@ -10,12 +10,14 @@
 
 
 {% block main %}
+<div class="d-flex justify-content-center">
+<div class="col-sm-2 ">
 
 {{ form_start(reservationForm)}}
        
 {{ form_widget(reservationForm) }}
       
-    
 {{ form_end(reservationForm) }}
-
+</div>
+</div>
 {% endblock %}
