@@ -7,6 +7,10 @@ header * {
   text-decoration: none;
 }
 
+p, i, span {
+  font-family: 'Old Standard TT';
+}
+
 /* Page slider */
 
 .swiper-container {
@@ -431,7 +435,7 @@ footer .contact {
 } */
 
 h1 {
-  color: #E3B951;
+  color: #AA843B;
   font-family: "Bebas Neue", sans-serif;
 }
 

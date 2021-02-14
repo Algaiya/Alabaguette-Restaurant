@@ -17,12 +17,25 @@ class ReservationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstname', TextType::class)
-            ->add('lastname', TextType::class)
-            ->add('phone', IntegerType::class)
-            ->add('nbperson', IntegerType::class)
-            ->add('date', DateTimeType::class)
+            ->add('firstname', TextType::class, [
+                'label' => 'Prénom',
+            ])
+            ->add('lastname', TextType::class, [
+                'label' => 'Nom',
+            ])
+            ->add('phone', IntegerType::class, [
+                'label' => 'Numéro de téléphone',
+            ])
+            ->add('nbperson', IntegerType::class, [
+                'label' => 'Nombre de personne',
+            ])
+            ->add('date', DateTimeType::class, [
+                'label' => 'Date pour laquelle vous réservez',
+            ])
             ->add('allergies', TextareaType::class)
+            ->add('Num_table', TextType::class, [
+                'label' => 'Numéro de table',
+            ])
             ->add('Submit', SubmitType::class);
     }
 
