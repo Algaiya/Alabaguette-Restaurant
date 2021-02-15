@@ -464,33 +464,6 @@ marquee i {
   margin-top: 2%;
 }
 
-/*---- MEDIA QUERIES ----*/
-
-@media screen and (max-width: 768px) {
-  .mentionCoVid {
-    width: 80%;
-  }
-  .texte_defilant {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 812px) {
-  .mentionCoVid {
-    width: 80%;
-  }
-  .texte_defilant {
-    margin-left: 25%;
-    margin-right: 25%;
-  }
-}
-
-@media screen and (min-width: 320px) {
-  .rest_covid h1 {
-    font-size: 25px;
-  }
-}
-
 /*** Slider ***/
 
 /* Slideshow container */
