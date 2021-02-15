@@ -15,6 +15,7 @@ class MentionsLegalesController extends AbstractController
   public function mentionslegales()
   {
     return $this->render('mentionslegales/mentionslegales.html.twig');
+
   }
 
 }
