@@ -253,94 +253,94 @@ MEDIAS QUERIES
 
 
     /*---- TABLES DU RESTAURANT ----*/
-        .table_1 {
+        #table_1 {
             height: 20px;
             width: 14px;
             margin-left: 0px;
             margin-top: 22px;
         }
 
-        .table_2 {
+        #table_2 {
             height: 15px;
             width: 25px;
             margin-right: 1px;
             margin-top: 20px;
         }
 
-        .table_3 {
+        #table_3 {
             height: 15px;
             width: 25px;
             margin-bottom: 0px;
         }
 
-        .table_4 {
+        #table_4 {
             height: 20px;
             width: 14px;
             margin-top: 28px;
             margin-left: 40px;
         }
 
-        .table_5 {
+        #table_5 {
             height: 14px;
             width: 20px;
         }
 
-        .table_6 {
+        #table_6 {
             height: 20px;
             width: 14px;
             margin-top: 40px;
             margin-left: 0px;
         }
 
-        .table_7 {
+        #table_7 {
             height: 20px;
             width: 25px;
             margin-left: -8px;
             margin-top: 25px;
         }
 
-        .table_8 {
+        #table_8 {
             height: 20px;
             width: 25px;
             margin-top: 25px;
         }
 
-        .table_9 {
+        #table_9 {
             height: 20px;
             width: 14px;
             margin-top: 10px;
             margin-left: -15px;
         }
 
-        .table_10 {
+        #table_10 {
             height: 25px;
             width: 20px;
             margin-top: 5px;
             margin-left: 10px;
         }
 
-        .table_11 {
+        #table_11 {
             height: 20px;
             width: 14px;
             margin-top: 15px;
             margin-left: 0px;
         }
 
-        .table_12 {
+        #table_12 {
             height: 20px;
             width: 25px;
             margin-top: 15px;
             margin-left: -9px;
         }
 
-        .table_13 {
+        #table_13 {
             height: 20px;
             width: 25px;
             margin-top: 15px;
 
         }
 
-        .table_14 {
+        #table_14 {
             height: 25px;
             width: 15px;
             margin-top: 15px;
@@ -362,4 +362,32 @@ MEDIAS QUERIES
             width: 715px;
         }
 
-}
+    }
+
+    @media screen and (max-width: 425px) {
+        .col div {
+            font-size: 4px;
+        }
+
+        #table_11 {
+            font-size: 3px;
+        }
+
+        #table_14 {
+            font-size: 3px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .col div {
+            font-size: 4px;
+        }
+
+        #table_11 {
+            font-size: 4px;
+        }
+
+        #table_14 {
+            font-size: 3px;
+        }
+    }
