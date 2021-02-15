@@ -13,6 +13,6 @@ class MentionsLegalesController extends AbstractController
    */
   public function mentionslegales()
   {
-    return $this->render('mentionslegales.html.twig');
+    return $this->render('mentionslégales/mentionslegales.html.twig');
   }
 }

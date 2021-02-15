@@ -29,9 +29,9 @@
     </div>
     <!-- LÉGENDE DU TABLEAU -->
     <div class="liste_legende">
-        <span><img src="/assets/images/reservation/armchair-green-64.png">Table disponible</span>
-        <span><img src="/assets/images/reservation/armchair-blue-64.png">Table sélectionnée</span>
-        <span><img src="/assets/images/reservation/armchair-red-64.png">Table indisponible</span>
+        <span><img src="/assets/images/reservation/armchair-green-64.png" alt="Chaise verte">Table disponible</span>
+        <span><img src="/assets/images/reservation/armchair-blue-64.png" alt="Chaise bleu">Table sélectionnée</span>
+        <span><img src="/assets/images/reservation/armchair-red-64.png" alt="Chaise rouge">Table indisponible</span>
     </div>
     <div class="container">
         <div class="row row_1">
@@ -83,5 +83,10 @@
             <div class="col">
                 <div id="table_14">Table14</div>
             </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" id="reservation_Submit" name="reservation[Submit]" class="btn-primary btn" href="{{ path('dashboard') }}">Validez le formulaire</button>
+    </div>
 {{ form_end(reservationForm) }}
 {% endblock %}

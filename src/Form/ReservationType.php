@@ -35,14 +35,14 @@ class ReservationType extends AbstractType
             ->add('allergies', TextareaType::class)
             ->add('Num_table', TextType::class, [
                 'label' => 'Numéro de table',
-            ])
-            ->add('Submit', SubmitType::class);
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
             'data_class' => Reservation::class,
+            "allow_extra_fields" => true,
         ]);
     }
 }

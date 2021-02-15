@@ -405,13 +405,14 @@ footer .contact {
 
 /*---- TEXTE DÉFILANT ----*/
 
-  .mentionCoVid {
-    margin: 0 auto;
-  }
+marquee i {
+  margin: 0 auto;
+}
 
-  .texte_defilant {
-    height: 40px;
-    width: 900px;
+.texte_defilant {
+    height: 35px;
+    margin-left: 25%;
+    margin-right: 25%;
     font-family: "Old_Standard", sans-serif;
     color: #202020;
     font-size: 20px;
@@ -434,7 +435,7 @@ footer .contact {
 }
 
 .rest_story {
-  border: 1px solid #E3B951;
+  border: 1px solid #AA843B;
   width: 75%;
   margin: 0 auto;
 }
@@ -479,7 +480,8 @@ footer .contact {
     width: 80%;
   }
   .texte_defilant {
-    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 }
 
