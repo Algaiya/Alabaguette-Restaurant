@@ -107,4 +107,26 @@ class DashboardController extends AbstractController
       "productccForm" => $formcc->createView()
     ]);
   }
+  /**
+   * @Route("/dashboard/product/add", name="ccproduct-add")
+   */
+  public function addproduct(Request $request)
+  {
+    $product = new Product;
+    $form = $this->createForm(ProductccType::class, $product);
+    $form->handleRequest($request);
+
+    if ($form->isSubmitted() && $form->isValid()) {
+      $entityManager = $this->getDoctrine()->getManager();
+      $entityManager->persist($product);
+      $entityManager->flush();
+
+      $this->addFlash("product_add_success", "Product ajouté avec succès");
+      return $this->redirectToRoute('ccproduct');
+    }
+
+    return $this->render('dashboard/productadd.html.twig', [
+      "productccForm" => $form->createView()
+    ]);
+  }
 }
