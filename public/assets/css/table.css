@@ -82,7 +82,7 @@ h1 {
         align-items: center;
     }
 
-    #table_1 {
+    #Table_1 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -91,7 +91,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_2 {
+    #Table_2 {
         height: 45px;
         width: 75px;
         background-color: green;
@@ -101,7 +101,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_3 {
+    #Table_3 {
         height: 45px;
         width: 75px;
         background-color: green;
@@ -111,7 +111,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_4 {
+    #Table_4 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -120,7 +120,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_5 {
+    #Table_5 {
         height: 45px;
         width: 75px;
         background-color: green;
@@ -129,7 +129,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_6 {
+    #Table_6 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -138,7 +138,7 @@ h1 {
         cursor: pointer; 
     }
 
-    #table_7 {
+    #Table_7 {
         height: 65px;
         width: 85px;
         background-color: green;
@@ -147,7 +147,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_8 {
+    #Table_8 {
         height: 65px;
         width: 85px;
         background-color: green;
@@ -156,7 +156,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_9 {
+    #Table_9 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -164,7 +164,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_10 {
+    #Table_10 {
         height: 85px;
         width: 65px;
         background-color: green;
@@ -172,7 +172,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_11 {
+    #Table_11 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -181,7 +181,7 @@ h1 {
         cursor: pointer; 
     }
 
-    #table_12 {
+    #Table_12 {
         height: 65px;
         width: 85px;
         background-color: green;
@@ -189,7 +189,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_13 {
+    #Table_13 {
         height: 65px;
         width: 85px;
         background-color: green;
@@ -197,7 +197,7 @@ h1 {
         cursor: pointer;
     }
 
-    #table_14 {
+    #Table_14 {
         height: 75px;
         width: 45px;
         background-color: green;
@@ -253,94 +253,94 @@ MEDIAS QUERIES
 
 
     /*---- TABLES DU RESTAURANT ----*/
-        #table_1 {
+        #Table_1 {
             height: 20px;
             width: 14px;
             margin-left: 0px;
             margin-top: 22px;
         }
 
-        #table_2 {
+        #Table_2 {
             height: 15px;
             width: 25px;
             margin-right: 1px;
             margin-top: 20px;
         }
 
-        #table_3 {
+        #Table_3 {
             height: 15px;
             width: 25px;
             margin-bottom: 0px;
         }
 
-        #table_4 {
+        #Table_4 {
             height: 20px;
             width: 14px;
             margin-top: 28px;
             margin-left: 40px;
         }
 
-        #table_5 {
+        #Table_5 {
             height: 14px;
             width: 20px;
         }
 
-        #table_6 {
+        #Table_6 {
             height: 20px;
             width: 14px;
             margin-top: 40px;
             margin-left: 0px;
         }
 
-        #table_7 {
+        #Table_7 {
             height: 20px;
             width: 25px;
             margin-left: -8px;
             margin-top: 25px;
         }
 
-        #table_8 {
+        #Table_8 {
             height: 20px;
             width: 25px;
             margin-top: 25px;
         }
 
-        #table_9 {
+        #Table_9 {
             height: 20px;
             width: 14px;
             margin-top: 10px;
             margin-left: -15px;
         }
 
-        #table_10 {
+        #Table_10 {
             height: 25px;
             width: 20px;
             margin-top: 5px;
             margin-left: 10px;
         }
 
-        #table_11 {
+        #Table_11 {
             height: 20px;
             width: 14px;
             margin-top: 15px;
             margin-left: 0px;
         }
 
-        #table_12 {
+        #Table_12 {
             height: 20px;
             width: 25px;
             margin-top: 15px;
             margin-left: -9px;
         }
 
-        #table_13 {
+        #Table_13 {
             height: 20px;
             width: 25px;
             margin-top: 15px;
 
         }
 
-        #table_14 {
+        #Table_14 {
             height: 25px;
             width: 15px;
             margin-top: 15px;
@@ -383,11 +383,11 @@ MEDIAS QUERIES
             font-size: 4px;
         }
 
-        #table_11 {
+        #Table_11 {
             font-size: 4px;
         }
 
-        #table_14 {
+        #Table_14 {
             font-size: 3px;
         }
     }

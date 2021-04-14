@@ -26,7 +26,7 @@ class ProductccType extends AbstractType
             'choice_label' => 'title',
         ])
 
-        ->add('Submit', SubmitType::class);
+        ->add('Ajouter', SubmitType::class);
 
     }
 
