@@ -1,0 +1,9 @@
+/*----- MODIFICATION FORM STYLIZATION -----*/
+
+#reservation_Submit {
+    margin-top: 15px;
+    margin-left: 43%;
+    width: 15%;
+    background-color: #AA843B;
+    border: #AA843B;
+}

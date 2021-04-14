@@ -1,16 +1,23 @@
 {% extends 'layout.html.twig' %}
 
+{% block CssEnfants %}
+    <link rel="stylesheet" href="{{ asset('assets/css/modificationform.css') }}">
+{% endblock %}
+
 {% block main %}
-
-<header>
-{% include 'include/dashnav.html.twig' %}
-</header>
-
    <h1 style="text-align:center">Modification d'une réservation</h1>
 
-<div class="d-flex justify-content-center">  
-    <div class="col-sm-2 ">
-        {{ form(form, {'attr': {'novalidate':'novalidate'}}) }}
+    <header>
+        {% include 'include/dashnav.html.twig' %}
+    </header>
+
+    <div class="d-flex justify-content-center">  
+        <div class="col-sm-2 ">
+            {{ form(form, {'attr': {'novalidate':'novalidate'}}) }}
+        </div>
     </div>
-</div>
+
+    <div class="form-group">
+        <button type="submit" id="reservation_Submit" name="reservation[Submit]" class="btn-primary btn" onclick="window.location.href ='{{ path('dashboard') }}';">Modifier</button>
+    </div>
 {% endblock %}
